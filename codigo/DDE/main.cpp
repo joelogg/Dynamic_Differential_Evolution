@@ -152,7 +152,7 @@ typedef CDynamicalDifferentialEvolution<pattern_t,20000,fitness_t,MAXIMUM> evolu
 int main (int, char*[])
 {
         srand(time(NULL));
-	int nRep = 3;
+	int nRep = 100;
 	while (nRep-- > 0)
 	{
             cout<<"Repeticion:  "<< (100-nRep)<<endl;
