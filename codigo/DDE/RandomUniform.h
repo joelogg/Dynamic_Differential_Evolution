@@ -18,12 +18,22 @@
 
 double RandomUniform(double minValue, double maxValue)
 {
-	long j;
+    if(maxValue-minValue==1)
+    {
+        return (rand()%1000)/1000.0;
+    }
+    else
+    {
+        int min = int(minValue);
+        int max = int(maxValue);
+        return rand() % (max-min+1) + min; 
+    }
+	/*long j;
 	long k;
-	static long idum;
-	static long idum2 = 123456789;
-	static long iy = 0;
-	static long iv[NTAB];
+	long idum;
+	long idum2 = 123456789;
+	long iy = 0;
+	long iv[NTAB];
 	double result;
 
 	if (iy == 0)
@@ -74,5 +84,5 @@ double RandomUniform(double minValue, double maxValue)
 		result = RNMX;
 
 	result = minValue + result * (maxValue - minValue);
-	return(result);
+	return(result);*/
 }
